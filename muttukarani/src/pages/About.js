@@ -6,14 +6,31 @@ const About = () => {
     <section
       id="about"
       name="about"
-      style={{ minHeight: "100vh", padding: "60px 0" }}
+      style={{
+        minHeight: "100vh",
+        padding: "60px 0",
+        backgroundColor: "#fde74c ",
+      }}
     >
       <Container>
-        <h2>About Me</h2>
-        <p>
-          I am a passionate frontend developer specializing in React.js and
-          modern web technologies. I have experience building scalable web
-          applications and enjoy creating user-friendly interfaces.
+        <h1>
+          <b>About Me</b>
+        </h1>
+        <p
+          style={{
+            textAlign: "justify",
+          }}
+        >
+          Creative and results-driven Front-end Developer with 1.6 years of
+          experience building responsive, user-friendly, and high-performance
+          web interfaces. Adept at turning design mockups into pixel-perfect,
+          accessible pages using HTML, CSS, JavaScript, and modern frameworks
+          like React.js and AngularJS. Strong in team-oriented collaboration,
+          proactive communication, and problem-solving. Skilled in working
+          closely with design and back-end teams to deliver seamless, engaging
+          digital experiences. Passionate about continuous learning, optimizing
+          performance, and crafting clean, maintainable code that brings
+          creative ideas to life.
         </p>
       </Container>
     </section>

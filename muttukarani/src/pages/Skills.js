@@ -1,24 +1,59 @@
 import React from "react";
-import { Container, ListGroup } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaReact,
+  FaJsSquare,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaNodeJs,
+  FaAngular,
+} from "react-icons/fa";
+import { SiFlutter, SiApachenetbeanside } from "react-icons/si";
 
 const Skills = () => {
+  const skills = [
+    { icon: <FaReact size={50} color="#61DBFB" />, name: "React.js" },
+    { icon: <FaAngular size={50} color="#dd1b16" />, name: "AngularJS" },
+    { icon: <SiFlutter size={50} color="#02569B" />, name: "Flutter" },
+    { icon: <FaJsSquare size={50} color="#F0DB4F" />, name: "JavaScript" },
+    { icon: <FaHtml5 size={50} color="#e34c26" />, name: "HTML" },
+    { icon: <FaCss3Alt size={50} color="#264de4" />, name: "CSS" },
+    { icon: <FaGitAlt size={50} color="#F1502F" />, name: "Git" },
+    { icon: <FaGithub size={50} color="#000" />, name: "GitHub" },
+    { icon: <FaNodeJs size={50} color="#3C873A" />, name: "Node.js" },
+    {
+      icon: <SiApachenetbeanside size={50} color="#1B6AC6" />,
+      name: "API Integration",
+    },
+  ];
+
   return (
     <section
       id="skills"
       name="skills"
-      style={{ minHeight: "100vh", padding: "60px 0" }}
+      style={{
+        minHeight: "100vh",
+        padding: "60px 0",
+        backgroundColor: "#fde74c",
+      }}
     >
       <Container>
-        <h2>My Skills</h2>
-        <p>Here are some of the skills I’ve gained over the years:</p>
-        <ListGroup>
-          <ListGroup.Item>React.js</ListGroup.Item>
-          <ListGroup.Item>JavaScript</ListGroup.Item>
-          <ListGroup.Item>HTML & CSS</ListGroup.Item>
-          <ListGroup.Item>Git & GitHub</ListGroup.Item>
-          <ListGroup.Item>Node.js</ListGroup.Item>
-          <ListGroup.Item>API Integration</ListGroup.Item>
-        </ListGroup>
+        <h1>
+          <b>My Skills</b>
+        </h1>
+        <h3>Here are some of the skills I’ve gained over the years:</h3>
+        <Row className="text-center">
+          {skills.map((skill, idx) => (
+            <Col xs={6} md={3} key={idx} style={{ marginBottom: "30px" }}>
+              <div>{skill.icon}</div>
+              <p style={{ marginTop: "10px", fontWeight: "bold" }}>
+                {skill.name}
+              </p>
+            </Col>
+          ))}
+        </Row>
       </Container>
     </section>
   );
