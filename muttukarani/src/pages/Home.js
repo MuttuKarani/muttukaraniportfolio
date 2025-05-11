@@ -11,10 +11,10 @@ const Home = () => {
       name="home"
       style={{
         minHeight: "100vh",
-        padding: "60px 0",
+        padding: "100px 0 40px",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#f8f9fa",
+        backgroundColor: "#fde74c",
       }}
     >
       <Container>
@@ -25,12 +25,15 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1>Hello 👋</h1>
+              <h1>Hey, I'm</h1>
               <h2>
-                I'm a{" "}
-                <span style={{ color: "#007bff", fontWeight: "bold" }}>
+                <span style={{ color: "#c3423f", fontWeight: "bold" }}>
                   <Typewriter
-                    words={["Frontend Developer", "React.js Enthusiast"]}
+                    words={[
+                      "Muttu Karani",
+                      "Frontend Developer",
+                      "React.js Enthusiast",
+                    ]}
                     loop={true}
                     cursor
                     cursorStyle="|"
@@ -40,18 +43,28 @@ const Home = () => {
                   />
                 </span>
               </h2>
-              <p>passionate about building modern web applications.</p>
+              <h5>passionate about building modern web applications.</h5>
             </motion.div>
             <div style={{ marginTop: "20px" }}>
               <a href="#contact">
-                <button className="btn btn-primary me-3">Contact Me</button>
+                <button
+                  className="btn btn-primary me-3"
+                  style={{ backgroundColor: " #5bc0eb", border: "none" }}
+                >
+                  Contact Me
+                </button>
               </a>
               <a
-                href="/assets/resume.pdf"
+                href="/assets/images/muttu_karani_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="btn btn-outline-primary">View Resume</button>
+                <button
+                  className="btn btn-primary me-3"
+                  style={{ backgroundColor: " #5bc0eb", border: "none" }}
+                >
+                  View Resume
+                </button>
               </a>
             </div>
           </Col>
@@ -72,7 +85,6 @@ const Home = () => {
                   width: "300px",
                   height: "300px",
                   objectFit: "cover",
-                  // boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
                 }}
               />
             </motion.div>

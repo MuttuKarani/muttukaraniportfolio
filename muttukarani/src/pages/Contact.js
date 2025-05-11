@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import "../styles/Contact.css";
 
 const Contact = () => {
   return (
@@ -10,50 +11,68 @@ const Contact = () => {
       style={{
         minHeight: "100vh",
         padding: "60px 0",
-        backgroundColor: "#f8f9fa",
+        backgroundColor: "#fde74c ",
       }}
     >
       <Container>
-        <h2 className="text-center mb-4">Let's connect</h2>
-        <p className="text-center mb-5">
+        <h1 className="text-start mb-4">
+          <b>Let's connect</b>
+        </h1>
+        <h3 className="text-start mb-5">
           If you have any questions or would like to get in touch, feel free to
           contact me below:
-        </p>
+        </h3>
 
         <Row>
-          {/* Left side - Social Links */}
-          <Col
-            md={4}
-            className="d-flex flex-column align-items-start justify-content-center"
-          >
-            <h5>Let's connect</h5>
-            <a
-              href="muttukarani86@gmail.com"
-              className="mb-3 d-flex align-items-center text-decoration-none text-dark"
-            >
-              <FaEnvelope size={24} className="me-2" /> your-email@example.com
-            </a>
-            <a
-              href="https://www.linkedin.com/in/muttu-karani-12085619b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-3 d-flex align-items-center text-decoration-none text-dark"
-            >
-              <FaLinkedin size={24} className="me-2" /> LinkedIn
-            </a>
-            <a
-              href="https://github.com/MuttuKarani"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-3 d-flex align-items-center text-decoration-none text-dark"
-            >
-              <FaGithub size={24} className="me-2" /> GitHub
-            </a>
-          </Col>
+          <Col md={5} className="d-flex flex-column justify-content-center">
+            <Row className="mb-4">
+              <Col xs={2}>
+                <FaEnvelope size={24} />
+              </Col>
+              <Col>
+                <a
+                  href="mailto:muttukarani86@gmail.com"
+                  className="text-decoration-none text-dark"
+                >
+                  muttukarani86@gmail.com
+                </a>
+              </Col>
+            </Row>
 
-          {/* Right side - Form in a Card */}
-          <Col md={8}>
-            <Card>
+            <Row className="mb-4">
+              <Col xs={2}>
+                <FaLinkedin size={24} />
+              </Col>
+              <Col>
+                <a
+                  href="https://www.linkedin.com/in/muttu-karani-12085619b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-dark"
+                >
+                  linkedin.com/in/muttu-karani
+                </a>
+              </Col>
+            </Row>
+
+            <Row className="mb-4">
+              <Col xs={2}>
+                <FaGithub size={24} />
+              </Col>
+              <Col>
+                <a
+                  href="https://github.com/MuttuKarani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-dark"
+                >
+                  github.com/MuttuKarani
+                </a>
+              </Col>
+            </Row>
+          </Col>
+          <Col md={7}>
+            <Card className="contact-form">
               <Card.Body>
                 <Form action="https://formspree.io/f/xdkgdjya" method="POST">
                   <Form.Group controlId="formName" className="mb-3">
@@ -87,7 +106,12 @@ const Contact = () => {
                     />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="w-100"
+                    style={{ backgroundColor: " #5bc0eb" }}
+                  >
                     Send Message
                   </Button>
                 </Form>
