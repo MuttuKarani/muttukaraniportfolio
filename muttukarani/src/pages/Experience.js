@@ -22,13 +22,44 @@ const Experience = () => {
           <Col md={8}>
             <h5>Springevening Pvt Ltd</h5>
             <p>
-              <strong>Front-end Developer</strong>
+              <strong>Mid-level Web Developer</strong>
             </p>
             <p style={{ textAlign: "justify" }}>
-              Responsible for developing responsive user interfaces using
-              React.js and integrating REST APIs. Collaborated with
-              cross-functional teams to enhance application performance and user
-              experience.
+              <ul>
+                •Built and maintained modular, scalable UI components using
+                React.js and AngularJS, improving code reusability and
+                performance.
+              </ul>
+              <ul>
+                •Collaborated with UX designers in Figma to implement
+                responsive, cross-device user interfaces.
+              </ul>{" "}
+              <ul>
+                •Optimized application performance across browsers and devices,
+                reducing load time by 25%.
+              </ul>{" "}
+              <ul>
+                •Integrated and tested RESTful APIs using Postman, ensuring
+                smooth real-time data flow.
+              </ul>{" "}
+              <ul>
+                •Refined Webpack configurations for faster builds and better
+                runtime efficiency.
+              </ul>
+              <ul>
+                {" "}
+                •Lowered dev time and costs by 15% through reusable component
+                architecture.
+              </ul>{" "}
+              <ul>
+                •Led development of a B2B web app featuring automated invoicing
+                and detailed reporting.
+              </ul>{" "}
+              <ul>
+                {" "}
+                •Exploring Flutter for cross-platform UI, utilizing AI tools to
+                enhance widget efficiency.
+              </ul>
             </p>
           </Col>
         </Row>
