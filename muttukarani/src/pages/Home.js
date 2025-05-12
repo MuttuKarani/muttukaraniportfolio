@@ -3,6 +3,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../assets/images/muttu.JPG";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -49,23 +50,20 @@ const Home = () => {
               <a href="#contact">
                 <button
                   className="btn btn-primary me-3"
-                  style={{ backgroundColor: " #5bc0eb", border: "none" }}
+                  style={{ backgroundColor: "#5bc0eb", border: "none" }}
                 >
                   Contact Me
                 </button>
               </a>
-              <a
-                href="/assets/images/muttu_karani_resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+
+              <Link to="/resume">
                 <button
                   className="btn btn-primary me-3"
-                  style={{ backgroundColor: " #5bc0eb", border: "none" }}
+                  style={{ backgroundColor: "#5bc0eb", border: "none" }}
                 >
                   View Resume
                 </button>
-              </a>
+              </Link>
             </div>
           </Col>
 

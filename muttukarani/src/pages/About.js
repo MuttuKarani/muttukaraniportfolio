@@ -13,7 +13,7 @@ const About = () => {
       }}
     >
       <Container>
-        <h1>
+        <h1 className="about " style={{ color: "#c3423f" }}>
           <b>About Me</b>
         </h1>
         <p
@@ -21,7 +21,7 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          Creative and results-driven Front-end Developer with 1.6 years of
+          Creative and results-driven Front-end Developer with 1.5+ years of
           experience building responsive, user-friendly, and high-performance
           web interfaces. Adept at turning design mockups into pixel-perfect,
           accessible pages using HTML, CSS, JavaScript, and modern frameworks
