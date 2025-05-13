@@ -25,7 +25,7 @@ const About = () => {
           experience building responsive, user-friendly, and high-performance
           web interfaces. Adept at turning design mockups into pixel-perfect,
           accessible pages using HTML, CSS, JavaScript, and modern frameworks
-          like React.js and AngularJS. Strong in team-oriented collaboration,
+          like React.js and Angular. Strong in team-oriented collaboration,
           proactive communication, and problem-solving. Skilled in working
           closely with design and back-end teams to deliver seamless, engaging
           digital experiences. Passionate about continuous learning, optimizing
