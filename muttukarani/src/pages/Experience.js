@@ -27,7 +27,7 @@ const Experience = () => {
             <p style={{ textAlign: "justify" }}>
               <ul>
                 •Built and maintained modular, scalable UI components using
-                React.js and AngularJS, improving code reusability and
+                React.js and Angular, improving code reusability and
                 performance.
               </ul>
               <ul>
