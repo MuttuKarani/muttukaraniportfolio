@@ -9,7 +9,7 @@ const NavigationBar = () => {
       expand="lg"
       fixed="top"
       className="navbar navbar-custom "
-      style={{ backgroundColor: "#fde74c" }}
+      style={{ backgroundColor: "#f3d6c3" }}
     >
       <Container>
         <Navbar.Brand href="#">

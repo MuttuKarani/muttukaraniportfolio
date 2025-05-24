@@ -1,15 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "../styles/Contact.css";
 
 const Experience = () => {
   return (
     <section
       id="experience"
       name="experience"
+      className="section-spacing"
       style={{
         minHeight: "100vh",
         padding: "60px 0",
-        backgroundColor: "#fde74c",
+        backgroundColor: "#f3d6c3",
       }}
     >
       <Container>

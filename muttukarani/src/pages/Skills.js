@@ -11,6 +11,7 @@ import {
   FaAngular,
 } from "react-icons/fa";
 import { SiFlutter, SiApachenetbeanside } from "react-icons/si";
+import "../styles/Contact.css";
 
 const Skills = () => {
   const skills = [
@@ -33,16 +34,15 @@ const Skills = () => {
     <section
       id="skills"
       name="skills"
+      className="section-spacing"
       style={{
         minHeight: "100vh",
         padding: "60px 0",
-        backgroundColor: "#fde74c",
+        backgroundColor: "#f3d6c3",
       }}
     >
       <Container>
-        <h1>
-          <b>My Skills</b>
-        </h1>
+        <h2 className="mb-4">My Skills</h2>
         <h3>Here are some of the skills I’ve gained over the years:</h3>
         <Row className="text-center">
           {skills.map((skill, idx) => (
