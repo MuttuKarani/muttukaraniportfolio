@@ -4,23 +4,25 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import myPhoto from "../assets/images/muttu.JPG";
 import { Link } from "react-router-dom";
+import "../styles/Contact.css";
 
 const Home = () => {
   return (
     <section
       id="home"
       name="home"
+      className="section-spacing"
       style={{
         minHeight: "100vh",
-        padding: "100px 0 40px",
+        padding: "80px 0 40px",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#fde74c",
+        backgroundColor: "#f3d6c3",
       }}
     >
       <Container>
-        <Row className="align-items-center">
-          <Col md={6}>
+        <Row className="align-items-center text-center text-md-start">
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -28,7 +30,7 @@ const Home = () => {
             >
               <h1>Hey, I'm</h1>
               <h2>
-                <span style={{ color: "#c3423f", fontWeight: "bold" }}>
+                <span style={{ color: "#ffb640", fontWeight: "bold" }}>
                   <Typewriter
                     words={[
                       "Muttu Karani",
@@ -44,21 +46,22 @@ const Home = () => {
                   />
                 </span>
               </h2>
-              <h5>passionate about building modern web applications.</h5>
+              <h5 className="mt-3">
+                passionate about building modern web applications.
+              </h5>
             </motion.div>
-            <div style={{ marginTop: "20px" }}>
+            <div className="mt-4 d-flex justify-content-center justify-content-md-start flex-wrap gap-3">
               <a href="#contact">
                 <button
-                  className="btn btn-primary me-3"
+                  className="btn btn-primary"
                   style={{ backgroundColor: "#5bc0eb", border: "none" }}
                 >
                   Contact Me
                 </button>
               </a>
-
               <Link to="/resume">
                 <button
-                  className="btn btn-primary me-3"
+                  className="btn btn-primary"
                   style={{ backgroundColor: "#5bc0eb", border: "none" }}
                 >
                   View Resume
@@ -67,12 +70,12 @@ const Home = () => {
             </div>
           </Col>
 
-          <Col md={6}>
+          <Col xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              style={{ display: "flex", justifyContent: "center" }}
+              className="d-flex justify-content-center"
             >
               <Image
                 src={myPhoto}
@@ -80,9 +83,10 @@ const Home = () => {
                 roundedCircle
                 fluid
                 style={{
-                  width: "300px",
-                  height: "300px",
+                  width: "280px",
+                  height: "280px",
                   objectFit: "cover",
+                  border: "5px solid #5bc0eb",
                 }}
               />
             </motion.div>
