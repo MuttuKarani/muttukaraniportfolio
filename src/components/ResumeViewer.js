@@ -4,7 +4,7 @@ const ResumeViewer = () => {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <iframe
-        src="/muttu_karani_resume.pdf"
+        src="/Muttu_Karani_Resume.pdf"
         title="Muttu Karani Resume"
         width="100%"
         height="100%"
