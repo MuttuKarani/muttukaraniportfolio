@@ -24,7 +24,7 @@ const Experience = () => {
           <Col md={8}>
             <h5>Springevening Pvt Ltd</h5>
             <p>
-              <strong>Mid-level Web Developer</strong>
+              <strong>Mid-Level Developer</strong>
             </p>
             <p style={{ textAlign: "justify" }}>
               <ul>
