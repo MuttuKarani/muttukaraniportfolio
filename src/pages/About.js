@@ -25,14 +25,14 @@ const About = () => {
           }}
         >
           <p>
-            A creative Front-end Developer with 1.5+ years of hands-on
-            experience building responsive, user-friendly, and
-            performance-optimized web applications. I specialize in creating
-            clean, scalable, and accessible user interfaces using modern web
-            technologies such as HTML5, CSS3, JavaScript, React.js, AngularJS,
-            Tailwind CSS, and Bootstrap.
+            Web Developer with 1.5+ years of experience building responsive,
+            high-performance web applications. Proficient in React.js,
+            AngularJS, JavaScript, and modern UI development. Experienced in
+            integrating REST APIs and working with backend tools like Node.js,
+            Express.js, and MongoDB. Focused on clean code, performance
+            optimization, and continuous learning.
           </p>
-          <p>
+          {/* <p>
             {" "}
             Over the past year and a half, I’ve had the opportunity to work on
             real-world projects where I developed reusable UI components,
@@ -61,7 +61,7 @@ const About = () => {
             {" "}
             When I’m not coding, you’ll likely find me exploring photography,
             playing sports, or learning something new in the tech world.
-          </p>
+          </p> */}
         </div>
       </Container>
     </section>

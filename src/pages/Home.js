@@ -34,7 +34,8 @@ const Home = () => {
                   <Typewriter
                     words={[
                       "Muttu Karani",
-                      "Frontend Developer",
+                      // "Frontend Developer",
+                      "Web Developer",
                       "React.js Enthusiast",
                     ]}
                     loop={true}

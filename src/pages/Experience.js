@@ -28,39 +28,51 @@ const Experience = () => {
             </p>
             <p style={{ textAlign: "justify" }}>
               <ul>
-                •Built and maintained modular, scalable UI components using
-                React.js and Angular, improving code reusability and
-                performance.
+                • Built and maintained modular, scalable UI components using
+                React.js and AngularJS to improve code reusability and
+                maintainability.
               </ul>
               <ul>
-                •Collaborated with UX designers in Figma to implement
-                responsive, cross-device user interfaces.
+                • Collaborated with UX designers via Figma to implement
+                responsive, cross-browser interfaces across desktop and mobile
+                devices.
               </ul>{" "}
               <ul>
-                •Optimized application performance across browsers and devices,
-                reducing load time by 25%.
+                • Optimized application performance and reduced load time by 25%
+                through code splitting, efficient rendering, and build-time
+                improvements.
               </ul>{" "}
               <ul>
-                •Integrated and tested RESTful APIs using Postman, ensuring
-                smooth real-time data flow.
+                • Integrated and tested RESTful APIs using Postman, ensuring
+                smooth real-time data flow and robust client-server
+                communication.
               </ul>{" "}
               <ul>
-                •Refined Webpack configurations for faster builds and better
-                runtime efficiency.
+                • Gained working knowledge of backend development using Node.js
+                and Express.js to create scalable REST APIs for integration with
+                frontend interfaces.
               </ul>
               <ul>
                 {" "}
-                •Lowered dev time and costs by 15% through reusable component
-                architecture.
+                • Refined Webpack and NPM configurations for faster builds and
+                enhanced runtime performance; utilized Angular CLI and React
+                scripts for streamlined development.
               </ul>{" "}
               <ul>
-                •Led development of a B2B web app featuring automated invoicing
-                and detailed reporting.
+                • Reduced development time and costs by 15% by designing
+                reusable UI component libraries and optimizing development
+                workflows.
               </ul>{" "}
               <ul>
                 {" "}
-                •Exploring Flutter for cross-platform UI, utilizing AI tools to
-                enhance widget efficiency.
+                • Led the frontend development of a B2B web application for
+                automated invoicing and advanced reporting capabilities.
+              </ul>
+              <ul>
+                {" "}
+                • Currently exploring Flutter for cross-platform UI development,
+                leveraging AI tools like ChatGPT to optimize widget design and
+                implementation.
               </ul>
             </p>
           </Col>
