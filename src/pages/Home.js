@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import myPhoto from "../assets/images/muttu.JPG";
+import myPhoto from "../assets/images/muttu.jpeg";
 import { Link } from "react-router-dom";
 import "../styles/Contact.css";
 
