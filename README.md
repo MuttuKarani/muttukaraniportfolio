@@ -9,7 +9,7 @@ Welcome to my personal portfolio project! This responsive web application is bui
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js, HTML5, CSS3, JavaScript
-- **Styling:** CSS Modules / Bootstrap (or update if using Sass, Tailwind, etc.)
+- **Styling:** CSS Modules / Bootstrap.
 - **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
 - **Deployment:** [Netlify](https://www.netlify.com/)
 
