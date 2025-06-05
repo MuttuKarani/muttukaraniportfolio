@@ -38,6 +38,11 @@ const Experience = () => {
                 devices.
               </ul>{" "}
               <ul>
+                {" "}
+                • Integrated Google Ads for tracking and promotion, enhancing
+                visibility and engagement of Flipbook content.
+              </ul>
+              <ul>
                 • Optimized application performance and reduced load time by 25%
                 through code splitting, efficient rendering, and build-time
                 improvements.
@@ -73,11 +78,6 @@ const Experience = () => {
                 • Currently exploring Flutter for cross-platform UI development,
                 leveraging AI tools like ChatGPT to optimize widget design and
                 implementation.
-              </ul>
-              <ul>
-                {" "}
-                • Integrated Google Ads for tracking and promotion, enhancing
-                visibility and engagement of Flipbook content.
               </ul>
             </p>
           </Col>
