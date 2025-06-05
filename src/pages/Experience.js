@@ -74,6 +74,11 @@ const Experience = () => {
                 leveraging AI tools like ChatGPT to optimize widget design and
                 implementation.
               </ul>
+              <ul>
+                {" "}
+                • Integrated Google Ads for tracking and promotion, enhancing
+                visibility and engagement of Flipbook content.
+              </ul>
             </p>
           </Col>
         </Row>

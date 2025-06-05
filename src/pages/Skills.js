@@ -11,6 +11,7 @@ import {
   FaAngular,
 } from "react-icons/fa";
 import { SiFlutter, SiApachenetbeanside } from "react-icons/si";
+import { motion } from "framer-motion";
 import "../styles/Contact.css";
 
 const Skills = () => {
@@ -47,10 +48,19 @@ const Skills = () => {
         <Row className="text-center">
           {skills.map((skill, idx) => (
             <Col xs={6} md={3} key={idx} style={{ marginBottom: "30px" }}>
-              <div>{skill.icon}</div>
-              <p style={{ marginTop: "10px", fontWeight: "bold" }}>
-                {skill.name}
-              </p>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                style={{ cursor: "pointer" }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div>{skill.icon}</div>
+                <p style={{ marginTop: "10px", fontWeight: "bold" }}>
+                  {skill.name}
+                </p>
+              </motion.div>
             </Col>
           ))}
         </Row>
