@@ -28,7 +28,7 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1>Hello, I'm</h1>
+              <h1>Hey, I'm</h1>
               <h2>
                 <span style={{ color: "#ffb640", fontWeight: "bold" }}>
                   <Typewriter
