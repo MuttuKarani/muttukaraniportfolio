@@ -17,7 +17,8 @@ const Home = () => {
         padding: "80px 0 40px",
         display: "flex",
         alignItems: "center",
-        backgroundColor: "#f3d6c3",
+        // backgroundColor: "#f3d6c3",
+        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
       <Container>
@@ -30,11 +31,18 @@ const Home = () => {
             >
               <h1>Hey, I'm</h1>
               <h2>
-                <span style={{ color: "#ffb640", fontWeight: "bold" }}>
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    fontWeight: "bold",
+                  }}
+                >
                   <Typewriter
                     words={[
                       "Muttu Karani",
-                      // "Frontend Developer",
                       "Web Developer",
                       "React.js Enthusiast",
                     ]}
@@ -47,6 +55,7 @@ const Home = () => {
                   />
                 </span>
               </h2>
+
               <h5 className="mt-3">
                 passionate about building modern web applications.
               </h5>

@@ -11,7 +11,8 @@ const About = () => {
       style={{
         minHeight: "100vh",
         padding: "60px 0",
-        backgroundColor: "#f3d6c3",
+        // backgroundColor: "#f3d6c3",
+        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
       <Container>

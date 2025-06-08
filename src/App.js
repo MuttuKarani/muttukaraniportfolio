@@ -7,6 +7,8 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
 import ResumeViewer from "./components/ResumeViewer";
+import Projects from "./pages/Projects";
+import Footer from "./pages/Footer";
 
 const MainLayout = () => (
   <>
@@ -16,7 +18,9 @@ const MainLayout = () => (
       <About />
       <Skills />
       <Experience />
+      <Projects />
       <Contact />
+      <Footer />
     </div>
   </>
 );

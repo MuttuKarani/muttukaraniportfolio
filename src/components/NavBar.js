@@ -9,7 +9,10 @@ const NavigationBar = () => {
       expand="lg"
       fixed="top"
       className="navbar navbar-custom "
-      style={{ backgroundColor: "#f3d6c3" }}
+      // style={{ backgroundColor: "#f3d6c3" }}
+      style={{
+        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
+      }}
     >
       <Container>
         <Navbar.Brand href="#">
@@ -73,6 +76,20 @@ const NavigationBar = () => {
               }}
             >
               Experience
+            </ScrollLink>
+            <ScrollLink
+              to="projects"
+              smooth
+              duration={500}
+              className="nav-link"
+              offset={-70}
+              style={{
+                fontWeight: "700",
+                cursor: "pointer",
+                marginRight: "20px",
+              }}
+            >
+              Projects
             </ScrollLink>
             <ScrollLink
               to="contact"
