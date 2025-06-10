@@ -21,7 +21,7 @@ const Projects = () => {
       title: "B2B Web Application",
       description:
         "Built a full-featured business-to-business web application using React.js, Node.js, Express, and MongoDB. The app enables companies to manage invoices, profiles, analytics dashboards, and API-based integrations. Implemented JWT-based authentication and a responsive UI with Bootstrap.",
-      link: "https://bbf.getsoochi.com",
+      link: "https://demo.soochiway.com/",
     },
     {
       title: "Yeats Clinic",
