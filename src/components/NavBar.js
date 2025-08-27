@@ -1,15 +1,23 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link as ScrollLink } from "react-scroll";
-import "../styles/Contact.css";
+import "../styles/Contact.css"; // we’ll add underline styles here
 
 const NavigationBar = () => {
+  const navItems = [
+    "home",
+    "about",
+    "skills",
+    "experience",
+    "projects",
+    "contact",
+  ];
+
   return (
     <Navbar
       expand="lg"
       fixed="top"
-      className="navbar navbar-custom "
-      // style={{ backgroundColor: "#f3d6c3" }}
+      className="navbar navbar-custom"
       style={{
         background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
@@ -21,90 +29,20 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <ScrollLink
-              to="home"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              Home
-            </ScrollLink>
-            <ScrollLink
-              to="about"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              About
-            </ScrollLink>
-            <ScrollLink
-              to="skills"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              Skills
-            </ScrollLink>
-            <ScrollLink
-              to="experience"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              Experience
-            </ScrollLink>
-            <ScrollLink
-              to="projects"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              Projects
-            </ScrollLink>
-            <ScrollLink
-              to="contact"
-              smooth
-              duration={500}
-              className="nav-link"
-              offset={-70}
-              style={{
-                fontWeight: "700",
-                cursor: "pointer",
-                marginRight: "20px",
-              }}
-            >
-              Contact
-            </ScrollLink>
+            {navItems.map((item, idx) => (
+              <ScrollLink
+                key={idx}
+                to={item}
+                smooth
+                duration={500}
+                spy={true} // ✅ detect active section while scrolling
+                offset={-70}
+                activeClass="active-link" // ✅ custom class when active
+                className="nav-link custom-link"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </ScrollLink>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

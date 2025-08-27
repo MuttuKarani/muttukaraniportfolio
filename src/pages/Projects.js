@@ -1,14 +1,16 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { FaLink, FaCode } from "react-icons/fa";
+import Carousel from "react-spring-3d-carousel";
+import { config } from "react-spring";
 
 const Projects = () => {
   const projects = [
     {
       title: "Happynenapu.com",
       description:
-        "Developed a community-oriented website with integrated Google AdSense for monetization. Hosted the Inner Wheel District 317 Flipbook to showcase club events, reports, and publications in an interactive format. Ensured a responsive design and smooth user experience across devices.",
+        "Developed a community-oriented website with integrated Google AdSense for monetization. Hosted the Inner Wheel District 317 Flipbook to showcase club events, reports, and publications in an interactive format.",
       links: [
         { label: "Visit Website", url: "https://happynenapu.com/" },
         {
@@ -20,28 +22,99 @@ const Projects = () => {
     {
       title: "B2B Web Application",
       description:
-        "Built a full-featured business-to-business web application using React.js, Node.js, Express, and MongoDB. The app enables companies to manage invoices, profiles, analytics dashboards, and API-based integrations. Implemented JWT-based authentication and a responsive UI with Bootstrap.",
+        "Full-featured B2B web application with invoices, dashboards, and integrations. Built using React, Node.js, Express, MongoDB.",
       link: "https://demo.soochiway.com/",
     },
     {
       title: "Yeats Clinic",
       description:
-        "Contributed to the Yeats Clinic healthcare web app by developing AngularJS modules for service booking, doctor listings, and responsive UI components. Refactored legacy code for better maintainability and implemented enhancements based on client requirements.",
+        "Contributed AngularJS modules for booking, doctor listings, and UI improvements.",
       link: "https://yeatsclinicalweb.z13.web.core.windows.net/",
     },
     {
       title: "EV Dashboard",
       description:
-        "A dashboard to visualize electric vehicle population data with D3.js and React. Switchable between Chart.js and D3.js charts.",
+        "Dashboard for visualizing EV population data with D3.js & Chart.js.",
       link: "https://mkevdashboard.netlify.app",
     },
     {
       title: "Careocity (In Progress)",
       description:
-        "Careocity is an innovative Flutter-based mobile application designed to support individuals and families who require Assisted Daily Services (ADLs). It empowers caregivers by offering streamlined scheduling, profile management, and communication tools, improving the quality of care and daily assistance.",
+        "Flutter-based mobile app to support families with Assisted Daily Services (ADLs).",
       link: "https://careocity.co/",
     },
   ];
+
+  const [goToSlide, setGoToSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  // Auto-rotate every 3s unless paused
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setGoToSlide((prev) => (prev + 1) % projects.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [paused, projects.length]);
+
+  // Prepare slides
+  const slides = projects.map((project, index) => ({
+    key: index,
+    content: (
+      <motion.div
+        className="p-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.05 }}
+      >
+        <div
+          className="rounded-3 shadow-lg text-white p-4"
+          style={{
+            background: "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+            maxWidth: "400px",
+            margin: "0 auto",
+          }}
+        >
+          <h4 className="d-flex align-items-center gap-2">
+            <FaCode /> {project.title}
+          </h4>
+          <p style={{ textAlign: "justify" }}>{project.description}</p>
+
+          <div className="d-flex justify-content-center gap-2 flex-wrap">
+            {project.links &&
+              project.links.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-light btn-sm"
+                >
+                  <FaLink className="me-1" />
+                  {link.label}
+                </a>
+              ))}
+
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-light btn-sm"
+              >
+                <FaLink className="me-1" />
+                View Project
+              </a>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    ),
+    onClick: () => setGoToSlide(index),
+  }));
 
   return (
     <section
@@ -55,76 +128,24 @@ const Projects = () => {
       }}
     >
       <Container>
-        <h2 className="mb-4">My Projects</h2>
-        <h3>Here are some of the projects I’ve built:</h3>
-        <Row className="mt-4">
-          {projects.map((project, idx) => (
-            <Col md={6} lg={4} className="mb-4" key={idx}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Card
-                  className="h-100 shadow-sm border-0 text-white"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
-                  }}
-                >
-                  <Card.Body>
-                    <Card.Title className="d-flex align-items-center gap-2">
-                      <FaCode />
-                      {project.title}
-                    </Card.Title>
-                    <Card.Text style={{ textAlign: "justify" }}>
-                      {project.description}
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer
-                    style={{
-                      background: "transparent",
-                      borderTop: "none",
-                      textAlign: "center",
-                    }}
-                  >
-                    <div className="d-flex justify-content-center gap-2 flex-wrap">
-                      {/* Handle multiple links if present */}
-                      {project.links &&
-                        project.links.map((link, i) => (
-                          <a
-                            key={i}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-light btn-sm"
-                          >
-                            <FaLink className="me-1" />
-                            {link.label}
-                          </a>
-                        ))}
+        <h2 className="mb-4 text-center">My Projects</h2>
+        <h3 className="text-center">
+          Here are some of the projects I’ve built:
+        </h3>
 
-                      {/* Handle single link */}
-                      {project.link && (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn-light btn-sm"
-                        >
-                          <FaLink className="me-1" />
-                          View Project
-                        </a>
-                      )}
-                    </div>
-                  </Card.Footer>
-                </Card>
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
+        <div
+          style={{ height: "500px", marginTop: "50px" }}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <Carousel
+            slides={slides}
+            goToSlide={goToSlide}
+            offsetRadius={2}
+            showNavigation={true}
+            animationConfig={config.gentle}
+          />
+        </div>
       </Container>
     </section>
   );
