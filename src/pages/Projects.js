@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaLink, FaCode } from "react-icons/fa";
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
+import "../styles/Contact.css";
 
 const Projects = () => {
   const projects = [
@@ -48,7 +49,7 @@ const Projects = () => {
   const [goToSlide, setGoToSlide] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  // Auto-rotate every 3s unless paused
+  // Auto-rotate
   useEffect(() => {
     if (paused) return;
 
@@ -59,7 +60,6 @@ const Projects = () => {
     return () => clearInterval(interval);
   }, [paused, projects.length]);
 
-  // Prepare slides
   const slides = projects.map((project, index) => ({
     key: index,
     content: (
@@ -78,11 +78,11 @@ const Projects = () => {
             margin: "0 auto",
           }}
         >
+          {" "}
           <h4 className="d-flex align-items-center gap-2">
             <FaCode /> {project.title}
           </h4>
           <p style={{ textAlign: "justify" }}>{project.description}</p>
-
           <div className="d-flex justify-content-center gap-2 flex-wrap">
             {project.links &&
               project.links.map((link, i) => (
@@ -128,13 +128,11 @@ const Projects = () => {
       }}
     >
       <Container>
-        <h2 className="mb-4 text-center">My Projects</h2>
-        <h3 className="text-center">
-          Here are some of the projects I’ve built:
-        </h3>
+        <h2 className="mb-4">My Projects</h2>
+        <h3 className="mb-4">Here are some of the projects I’ve built:</h3>
 
         <div
-          style={{ height: "500px", marginTop: "50px" }}
+          className="carousel-wrapper"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >

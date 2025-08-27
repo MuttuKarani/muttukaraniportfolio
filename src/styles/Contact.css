@@ -41,3 +41,66 @@
     margin-bottom: 0;
   }
 }
+
+/* project section css */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  max-height: 500px;
+  min-height: 280px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.carousel-wrapper .carousel__arrow {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.carousel-wrapper .carousel__arrow:hover {
+  background: white;
+}
+
+/* Position arrows closer to content */
+.carousel-wrapper .carousel__arrow--left {
+  left: 5%;
+}
+
+.carousel-wrapper .carousel__arrow--right {
+  right: 5%;
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    height: 40vh;
+  }
+  .project-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  .carousel-wrapper .carousel__arrow {
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    height: 50vh;
+  }
+  .project-card {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  .carousel-wrapper .carousel__arrow {
+    padding: 0.3rem;
+  }
+}
